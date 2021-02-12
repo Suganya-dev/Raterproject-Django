@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "raterapp",
+            "database": "db.sqlite3"
+        }
+    ]
+}

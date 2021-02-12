@@ -1,0 +1,30 @@
+[
+    {
+        "model": "raterprojectapi.games",
+        "pk": 1,
+        "fields": {
+            "title": "Mexican Train Dominos",
+            "description":"Cover all the routes",
+            "designer":"group",
+            "Number_of_players" : 2,
+            "releaseYear":1985,
+            "timeToPlay":30,
+            "ageRec":10
+           
+        }
+    },
+    {
+        "model": "raterprojectapi.games",
+        "pk": 2,
+        "fields": {
+            "title": "Board game",
+            "description":"chess",
+            "designer":"set of two",
+            "Number_of_players" :4,
+            "releaseYear":1990,
+            "timeToPlay":60,
+            "ageRec":12
+            
+        }
+    }
+]
