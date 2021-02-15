@@ -4,7 +4,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
 from django.views.decorators.csrf import csrf_exempt
-from levelupapi.models import Player
+from raterprojectapi.models import Player
 
 
 @csrf_exempt
@@ -58,7 +58,7 @@ def register_user(request):
         last_name=req_body['last_name']
     )
 
-    # Now save the extra info in the levelupapi_gamer table
+    # Now save the extra info in the raterprojectapi_gamer table
     player = Player.objects.create(
         bio=req_body['bio'],
         user=new_user

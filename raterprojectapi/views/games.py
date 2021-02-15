@@ -5,7 +5,7 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers
-from levelupapi.models import Games,Player
+from raterprojectapi.models import Games,Player
 
 class GamesViewSet(ViewSet):
     """Level up games"""
@@ -18,7 +18,7 @@ class GamesViewSet(ViewSet):
         """
 
         # Uses the token passed in the `Authorization` header
-        player = Player.objects.get(user=request.auth.user)
+        rater = Rater.objects.get(user=request.auth.user)
 
         # Create a new Python instance of the Game class
         # and set its properties from what was sent in the
@@ -31,7 +31,7 @@ class GamesViewSet(ViewSet):
         game.releaseYear = request.data["releaseYear"]
         game.timeToPlay = request.data["timeToPlay"]
         game.ageRec = request.data["ageRec"]
-        game.player = player
+        game.rater = Rater
 
         # Use the Django ORM to get the record from the database
         # whose `id` is what the client passed as the
