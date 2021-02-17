@@ -4,7 +4,10 @@ rm db.sqlite3
 python manage.py migrate
 python manage.py makemigrations raterprojectapi
 python manage.py migrate raterprojectapi
-python manage.py loaddata users
-python manage.py loaddata category
+python manage.py loaddata categories
 python manage.py loaddata games
-python manage.py loaddata ratings
+
+# Create a seed.sh file in your project directory
+# Place the code below in the file.
+# Run chmod +x seed.sh in the terminal.
+# Then run ./seed.sh in the terminal to run the commands.

@@ -3,7 +3,7 @@
         "model": "raterprojectapi.games",
         "pk": 1,
         "fields": {
-            "rater":1,
+            "player":1,
             "title": "Mexican Train Dominos",
             "description":"Cover all the routes",
             "designer":"group",
@@ -18,7 +18,7 @@
         "model": "raterprojectapi.games",
         "pk": 2,
         "fields": {
-            "rater":1,
+            "player":1,
             "title": "Board game",
             "description":"chess",
             "designer":"set of two",
