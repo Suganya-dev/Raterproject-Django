@@ -18,7 +18,7 @@ class GamesViewSet(ViewSet):
         """
 
         # Uses the token passed in the `Authorization` header
-        rater = Rater.objects.get(user=request.auth.user)
+        player = Player.objects.get(user=request.auth.user)
 
         # Create a new Python instance of the Game class
         # and set its properties from what was sent in the
@@ -31,7 +31,7 @@ class GamesViewSet(ViewSet):
         game.releaseYear = request.data["releaseYear"]
         game.timeToPlay = request.data["timeToPlay"]
         game.ageRec = request.data["ageRec"]
-        game.rater = Rater
+        game.player = Player
 
         # Use the Django ORM to get the record from the database
         # whose `id` is what the client passed as the
@@ -144,5 +144,6 @@ class GamesSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Games
-        fields = ('id', 'title', 'description','designer','Number_of_players', 'releaseYear','timeToPlay','ageRec','Player')
+        fields = ('id', 'title', 'description',
+        'designer','Number_of_players', 'releaseYear','timeToPlay','ageRec','Player')
         depth = 1
